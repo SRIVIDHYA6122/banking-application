@@ -33,8 +33,8 @@ public class User
 	        System.out.println("2.withdraw amount");
 	        System.out.println("3.deposit amount");
 	        System.out.println("4.account statement");
-	        System.out.println("5.display all account");
-	        System.out.println("6.exit");
+	     //   System.out.println("5.display all account");
+	        System.out.println("5.exit");
 	       
 	        
 	        int choice=sc.nextInt();
@@ -48,9 +48,9 @@ public class User
 	        break;
 	        case 4: BankManagement.statementBalance();
 	        break;
-	        case 5: BankManagement.displayallAccount();
-	        break;
-	        case 6: BankManagement.exit();
+	        //case 5: BankManagement.displayallAccount();
+	       // break;
+	        case 5: BankManagement.exit();
 	        break;
 	        default: System.out.println("Invalid choice....");
 	        }

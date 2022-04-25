@@ -19,6 +19,8 @@ public class Bank
 		System.out.println("Enter the choice:");
 		System.out.println("1.USER");
 		System.out.println("2.NEW USER");
+		System.out.println("3.DISPLAY ALL ACCOUNT DETAILS");
+		
 		System.out.println("---------");
 		
 	    choice=sc.nextInt();
@@ -27,6 +29,8 @@ public class Bank
 		case 1: User.logIn();
 		        break;
 		case 2:NewUser.Create();
+				break;
+		case 3:Display.Account();
 				break;
 		
 		default:

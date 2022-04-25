@@ -26,13 +26,13 @@ public class BankManagement
 		passwordno=sc.nextInt();
 		sql="select * from account where password="+passwordno;
 		rs=st.executeQuery(sql);
-		System.out.println("-------------------------------------------------------------------");
-		System.out.println("accno\t \tpassword\t\taname\t\tphone\t\tmail\t\tbalance");
-		System.out.println("-------------------------------------------------------------------");
+		System.out.println("----------------------------------------------------------------------------------------------------------");
+		System.out.println("accno\t\t\tpassword\taname\t\tphone\t\tmail\t\t\tbalance");
+		System.out.println("----------------------------------------------------------------------------------------------------------");
 		if(rs.next())
 		{	//accno=rs.get(columnLabel)
 			balance=rs.getInt("balance");
-			System.out.println(rs.getString(1)+"\t"+rs.getInt(2)+"\t"+rs.getString(3)+"\t"+rs.getString(4)+"\t"+rs.getString(5)+"\t"+rs.getInt(6));
+			System.out.println(rs.getString(1)+"\t\t"+rs.getInt(2)+"\t\t"+rs.getString(3)+"\t\t"+rs.getString(4)+"\t"+rs.getString(5)+"\t\t"+rs.getInt(6));
 			System.out.println("YOUR CURRENT BALANCE IS:"+balance);
 		}
 		else
@@ -67,9 +67,9 @@ public class BankManagement
 					
 					System.out.println("Available Balance is: "+amount);
 					//balance=rs.getInt("balance");
-					System.out.println("-------------------------------------------------------------------");
-					System.out.println("accno\t\tpassword\t\taname\t\tphone\t\tmail\t\tbalance");
-					System.out.println("-------------------------------------------------------------------");
+					System.out.println("----------------------------------------------------------------------------------------------------------");
+					System.out.println("accno\t\t\tpassword\taname\t\tphone\t\tmail\t\t\tbalance");
+					System.out.println("----------------------------------------------------------------------------------------------------------");
 					
 					sql=" select * from account where password='"+passwordno+"'";
 					rs=st.executeQuery(sql);
@@ -77,7 +77,7 @@ public class BankManagement
 					{
 						
 					
-					System.out.println(rs.getString(1)+"\t\t"+rs.getInt(2)+"\t\t"+rs.getString(3)+"\t\t"+rs.getString(4)+"\t\t"+rs.getString(5)+"\t\t"+rs.getInt(6));
+						System.out.println(rs.getString(1)+"\t\t"+rs.getInt(2)+"\t\t"+rs.getString(3)+"\t\t"+rs.getString(4)+"\t"+rs.getString(5)+"\t\t"+rs.getInt(6));
 					}
 					else
 					{
@@ -117,9 +117,9 @@ public class BankManagement
 				//System.out.println(rs.getString(1)+"\t\t"+rs.getInt(2)+"\t\t"+rs.getString(3)+"\t\t"+rs.getString(4)+"\t\t"+rs.getString(5)+"\t\t"+rs.getInt(6));
 				System.out.println("your deposite amount is: "+deposit_amount);
 				System.out.println("current Balance is: "+amount);
-				System.out.println("-------------------------------------------------------------------");
-				System.out.println("accno\t\tpassword\t\taname\t\tphone\t\tmail\t\tbalance");
-				System.out.println("-------------------------------------------------------------------");
+				System.out.println("----------------------------------------------------------------------------------------------------------");
+				System.out.println("accno\t\t\tpassword\taname\t\tphone\t\tmail\t\t\tbalance");
+				System.out.println("----------------------------------------------------------------------------------------------------------");
 				
 				sql=" select * from account where password='"+passwordno+"'";
 				rs=st.executeQuery(sql);
@@ -127,7 +127,7 @@ public class BankManagement
 				{
 					
 				
-				System.out.println(rs.getString(1)+"\t\t"+rs.getInt(2)+"\t\t"+rs.getString(3)+"\t\t"+rs.getString(4)+"\t\t"+rs.getString(5)+"\t\t"+rs.getInt(6));
+					System.out.println(rs.getString(1)+"\t\t"+rs.getInt(2)+"\t\t"+rs.getString(3)+"\t\t"+rs.getString(4)+"\t"+rs.getString(5)+"\t\t"+rs.getInt(6));
 				}
 				else
 				{
@@ -169,28 +169,7 @@ public class BankManagement
 		System.out.println("THANK YOU");
 		
 	}
-	public static void displayallAccount() {
-		try
-		{
-			scon=Dbconnection.getConnection();
-			st=scon.createStatement();
-			
-			String sql="select * from account";
-			rs=st.executeQuery(sql);
-			
-			System.out.println("-------------------------------------------------------------------");
-			System.out.println("accno\t\t    password\t\t   aname\t\t  phone\t\t   mail\t\t  balance");
-			System.out.println("-------------------------------------------------------------------");
-			while(rs.next()) {
-				System.out.println(rs.getString(1)+"\t\t"+rs.getInt(2)+"\t\t"+rs.getString(3)+"\t\t"+rs.getString(4)+"\t\t"+rs.getString(5)+"\t\t"+rs.getInt(6));
-			}
-			
-		}catch(Exception e) {
-			e.printStackTrace();
-		}
-		 
-		
-	}
+	
 	
 	
 

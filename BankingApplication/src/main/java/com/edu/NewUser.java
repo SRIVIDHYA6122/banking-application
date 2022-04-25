@@ -49,9 +49,9 @@ public class NewUser {
 		int i= st.executeUpdate(sql);
 		if(i>0)
 		{
-		System.out.println("-------------------------------------------------------------------");
-		System.out.println("accno\t\tpassword\t\taname\t\tphone\t\tmail\t\tbalance");
-		System.out.println("-------------------------------------------------------------------");
+			System.out.println("----------------------------------------------------------------------------------------------------------");
+			System.out.println("accno\t\t\tpassword\taname\t\tphone\t\tmail\t\t\tbalance");
+			System.out.println("----------------------------------------------------------------------------------------------------------");
 		
 		sql=" select * from account where accno='"+accno+"'";
 		rs=st.executeQuery(sql);
@@ -59,7 +59,7 @@ public class NewUser {
 		{
 			
 		
-		System.out.println(rs.getString(1)+"\t\t"+rs.getInt(2)+"\t\t"+rs.getString(3)+"\t\t"+rs.getString(4)+"\t\t"+rs.getString(5)+"\t\t"+rs.getInt(6));
+			System.out.println(rs.getString(1)+"\t\t"+rs.getInt(2)+"\t\t"+rs.getString(3)+"\t\t"+rs.getString(4)+"\t"+rs.getString(5)+"\t\t"+rs.getInt(6));
 		System.out.println("Record is inserted successfully");
 		}
 		else
